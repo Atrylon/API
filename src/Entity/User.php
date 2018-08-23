@@ -68,7 +68,7 @@ class User implements UserInterface
     private $apiKey;
 
     /**
-     * @ORM\OneToMany(targetEntity="App\Entity\Article", mappedBy="User")
+     * @ORM\OneToMany(targetEntity="App\Entity\Article", mappedBy="User", cascade={"remove"})
      */
     private $articles;
 

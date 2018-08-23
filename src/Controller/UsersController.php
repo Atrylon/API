@@ -97,10 +97,6 @@ ConstraintViolationListInterface $validationErrors)
      *     response=200,
      *     description="Modify the user data based on his Id"
      * )
-     * @SWG\Response(
-     *     response=200,
-     *     description="Modify user's data"
-     * )
      * @SWG\Tag(name="user")
      */
     public function putUserAction(Request $request, int $id, ValidatorInterface $validator){
@@ -151,7 +147,7 @@ ConstraintViolationListInterface $validationErrors)
      * )
      * @SWG\Tag(name="user")
      */
-    public function deleteUserAction(int $id){
+    public function deleteUserAction($id){
 
         $user = $this->userRepository->find($id);
 
