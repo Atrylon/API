@@ -97,14 +97,12 @@ class UsersControllerTest extends WebTestCase
         $client = static::createClient();
         $client->request(
             'DELETE',
-            '/api/users',
-            [
-                'id' => '10',
-            ],
+            '/api/users/10',
+            [],
             [],
             [
                 'CONTENT_TYPE' => 'application/json',
-                'AUTH-TOKEN' => '5b7e65ec8db4f7.47229317',
+                'HTTP_AUTH-TOKEN' => '5b7e65ec8db4f7.47229317',
             ]
         );
 
